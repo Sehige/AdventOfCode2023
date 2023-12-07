@@ -1,8 +1,8 @@
 ﻿namespace AdventOfCode
 {
-    public class Main
+    public class AdventOfCode
     {
-        public static void Run()
+        public static void Main()
         {
             Day1.Solve();
         }
