@@ -12,10 +12,7 @@ namespace AdventOfCode
     {
         public static void Solve()
         {
-            string filePath = "\\Day1\\Day1.txt";
-            string workingDirectory = Environment.CurrentDirectory;
-            string sDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-            string[] sText = File.ReadAllLines(sDirectory + filePath);
+            string[] sText = AdventOfCode.GetData(1);
 
             int nTotal = 0;
             foreach (string s in sText)
@@ -26,11 +23,11 @@ namespace AdventOfCode
                 int cNr2 = numbers.Last(); 
 
                 int nNrFinal = cNr1 * 10 + cNr2;
-                Console.WriteLine(nNrFinal);
+                //Console.WriteLine(nNrFinal);
                 nTotal += nNrFinal;
             }
 
-            Console.WriteLine(nTotal);
+            //Console.WriteLine(nTotal);
         }
 
         private static int GetFirstNumber(string sLine)
